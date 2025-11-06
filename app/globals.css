@@ -1,0 +1,130 @@
+:root {
+  color-scheme: light;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background-color: #0b1221;
+  color: #f5f7fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  background: radial-gradient(circle at top, #152243, #070c16 65%, #04070d);
+}
+
+a {
+  color: inherit;
+}
+
+main {
+  width: 100%;
+  max-width: 960px;
+  padding: 4rem 1.5rem 6rem;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 700;
+}
+
+p {
+  line-height: 1.7;
+  margin: 0;
+}
+
+.page-title {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.page-intro {
+  max-width: 720px;
+  margin-bottom: 3rem;
+  color: rgba(245, 247, 251, 0.82);
+}
+
+.quotes-grid {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.quote-card {
+  background: rgba(17, 27, 49, 0.78);
+  border: 1px solid rgba(83, 121, 220, 0.16);
+  border-radius: 20px;
+  padding: 1.75rem;
+  box-shadow: 0 20px 45px rgba(8, 12, 28, 0.45);
+  backdrop-filter: blur(6px);
+  transition: transform 0.35s ease, box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.quote-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(120, 163, 255, 0.4);
+  box-shadow: 0 28px 60px rgba(10, 20, 55, 0.55);
+}
+
+.quote-card .quote {
+  margin-bottom: 1rem;
+}
+
+.quote-card .quote:last-of-type {
+  margin-bottom: 1.5rem;
+}
+
+.quote-card .arabic {
+  font-size: 1.15rem;
+  color: #e4ecff;
+}
+
+.quote-card .translation {
+  font-size: 1rem;
+  color: rgba(225, 231, 248, 0.88);
+}
+
+.quote-card .translation.english {
+  color: rgba(200, 207, 229, 0.88);
+}
+
+.quote-source {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+  color: rgba(163, 185, 241, 0.9);
+}
+
+.quote-source a {
+  color: rgba(188, 207, 255, 0.95);
+  text-decoration: none;
+}
+
+.quote-source a:hover {
+  text-decoration: underline;
+}
+
+.source-work {
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 3rem 1rem 4rem;
+  }
+
+  .quote-card {
+    padding: 1.4rem;
+  }
+}
